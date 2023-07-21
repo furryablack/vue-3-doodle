@@ -1,17 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
+import * as fs from 'fs';
+import * as path from 'path';
 import { loadEnv as loadEnvNative } from 'vite';
-import { Lib as ProjectLib } from '../lib';
 import { PATHS } from './paths';
 
 function makeAliases() {
-  return ProjectLib.IO.getSubDirs(PATHS.APP_SOURCE).reduce(
+  const getSubDirs = (folder: string) => {
+    return fs.readdirSync(folder).filter(
+      (name) => fs.lstatSync(path.join(folder, name)).isDirectory(),
+    );
+  }
+
+  return getSubDirs(PATHS.APP_SOURCE).reduce(
     (acc: any, name: any) => ({
       ...acc,
-      [`@${name}`]: `${ProjectLib.IO.resolvePath(PATHS.APP_SOURCE)}/${name}`,
+      [`@${name}`]: `${PATHS.APP_SOURCE}/${name}`,
     }), {},
   );
 }
+
 function loadViteEnv(mode: string): void {
   process.env = {
     ...process.env,

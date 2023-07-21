@@ -3,20 +3,10 @@
  *  */
 
 module.exports = {
-  content: ['./index.html', "./src/**/*.{vue,js,ts}"],
+  content: ['./index.html', "./src/**/*.{vue,ts}"],
 
-  theme: {
-    extend: {},
-  },
-  
   plugins: [
     "tailwindcss",
     "autoprefixer",
   ],
-
-  darkMode: 'media',
-  
-  variants: {
-    extend: {},
-  },
 }
