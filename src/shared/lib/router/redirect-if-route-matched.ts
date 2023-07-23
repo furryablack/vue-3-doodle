@@ -1,19 +1,19 @@
 import { Shared } from '@shared';
 
 /**
- * Make a route unaccessable
+ * Make a route unaccessable to navigate
  * 
- * It always matches route exactly
+ * Route's children will be available to navigate yet
  * 
- * It will navigate to vue-router START_LOCATION (see documentation for details)
+ * If unaccessable route matched will try to navigate to back
  * 
- * If START_LOCATION equals to an unaccessable route path 
- * it will navigate to app base url(like "home", see VITE_APP_BASE_URL)
+ * If back route is initial route (vue-router.START_LOCATION) 
+ * will try to navigate to VITE_APP_BASE_URL
  * 
- * @param unaccessablePath - unaccessable route path 
+ * @param route - unaccessable route 
  * @returns RouteRecordRedirectOption function like (to: RouteLocation) => RouteLocationRaw 
  */
-export function redirectIfRouteMatched(unaccessablePath: string) {
+export function redirectIfRouteMatched(unaccessableRoute: string) {
   const LibRouter = Shared.Lib.Router;
   const LibEnvironment = Shared.Lib.Environment;
   const { VITE_APP_BASE_URL } = LibEnvironment.getParsed();
@@ -21,7 +21,7 @@ export function redirectIfRouteMatched(unaccessablePath: string) {
   return () => {
     const initalRoute = LibRouter.getInitialRoute();
 
-    const redirectPath = initalRoute.path === unaccessablePath
+    const redirectPath = initalRoute.path === unaccessableRoute
       ? VITE_APP_BASE_URL
       : initalRoute.path;
 
