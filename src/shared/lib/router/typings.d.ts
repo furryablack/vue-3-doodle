@@ -6,6 +6,14 @@ declare module 'vue-router' {
       auth?: boolean,
       unauth?: boolean,
       maintainance?: boolean,
-    }
+    },
+
+    isAreaScope?: {
+      dashboard?: boolean,
+      user?: boolean,
+      account?: boolean,
+      planned?: boolean,
+      unplanned?: boolean,
+    },
   }
 }
