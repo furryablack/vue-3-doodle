@@ -9,4 +9,12 @@ module.exports = {
     "tailwindcss",
     "autoprefixer",
   ],
+
+  theme: {
+    extend: {
+      fontWeight: {
+        'weight-inherit': 'inherit',
+      },
+    },
+  },
 }

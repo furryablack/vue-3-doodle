@@ -9,5 +9,11 @@ import { Shared } from '@shared';
 </script>
 
 <style lang="less">
-@import "@shared/ui/setup-tailwind.less";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply overflow-x-hidden overflow-y-auto min-h-screen antialiased;
+}
 </style>
