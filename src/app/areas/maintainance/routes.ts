@@ -13,7 +13,7 @@ export const routes = [
       {
         path: '/:pathMatch(.*)*',
         component: Pages.Maintainance.NotFound,
-      },,
+      },
 
       {
         path: 'service-unavailable',
