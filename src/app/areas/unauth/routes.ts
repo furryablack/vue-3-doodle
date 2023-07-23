@@ -4,11 +4,5 @@ export const routes = [
   {
     path: 'account',
     children: account,
-
-    meta: {
-      isAreaScope: {
-        account: true,
-      },
-    },
   },
 ];

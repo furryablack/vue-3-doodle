@@ -5,22 +5,10 @@ export const routes = [
   {
     path: '',
     children: dashboard,
-
-    meta: {
-      isAreaScope: {
-        dashboard: true,
-      },  
-    },
   },
 
   {
     path: 'user',
     children: user,
-    
-    meta: {
-      isAreaScope: {
-        user: true,
-      },  
-    },
   },
 ];

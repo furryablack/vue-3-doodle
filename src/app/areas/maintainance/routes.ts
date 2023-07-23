@@ -14,23 +14,11 @@ export const routes = [
       {
         path: '',
         children: unplanned,
-
-        meta: {
-          isAreaScope: {
-            unplanned: true,
-          },
-        },
       },
 
       {
         path: '',
         children: planned,
-
-        meta: {
-          isAreaScope: {
-            planned: true,
-          },
-        },
       },
     ],
   },
