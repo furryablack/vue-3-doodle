@@ -14,6 +14,6 @@ import { Shared } from '@shared';
 @tailwind utilities;
 
 body {
-  @apply overflow-x-hidden overflow-y-auto min-h-screen antialiased;
+  @apply overflow-x-hidden overflow-y-auto h-screen antialiased relative;
 }
 </style>
