@@ -1,5 +1,5 @@
 <template>
   <div>
-    Page not found
+    Maintainance Not Found
   </div>
 </template>

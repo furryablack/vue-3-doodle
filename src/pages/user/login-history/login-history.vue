@@ -1,5 +1,5 @@
 <template>
   <div>
-    User History
+    User Login History
   </div>
 </template>

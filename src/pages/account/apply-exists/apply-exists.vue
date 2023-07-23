@@ -1,5 +1,5 @@
 <template>
   <div>
-    Account Sign-Up
+    Account Apply Exists
   </div>
 </template>

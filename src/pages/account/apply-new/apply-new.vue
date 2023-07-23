@@ -1,5 +1,5 @@
 <template>
   <div>
-    Account Sign-In
+    Account Apply New
   </div>
 </template>

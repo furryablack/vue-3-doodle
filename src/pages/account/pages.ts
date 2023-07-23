@@ -1,7 +1,7 @@
-import { SignIn } from './sign-in';
-import { SignUp } from './sign-up';
+import { ApplyNew } from './apply-new';
+import { ApplyExists } from './apply-exists';
 
 export const Pages = {
-  SignIn,
-  SignUp,
+  ApplyNew,
+  ApplyExists,
 };

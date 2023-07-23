@@ -3,11 +3,11 @@ import { Pages } from './pages';
 export const routes = [
   {
     path: '',
-    component: Pages.SignIn,
+    component: Pages.ApplyExists,
   },
 
   {
-    path: 'sign-up',
-    component: Pages.SignUp,
+    path: 'apply-new',
+    component: Pages.ApplyNew,
   },
 ];
