@@ -5,11 +5,6 @@
 </template>
 
 <style lang="less">
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  @apply overflow-x-hidden overflow-y-auto h-screen antialiased relative;
-}
+@import '@shared/ui/less/fonts';
+@import '@shared/ui/less/defaults';
 </style>
