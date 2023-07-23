@@ -6,6 +6,9 @@ declare module 'vue-router' {
       auth?: boolean,
       unauth?: boolean,
       maintainance?: boolean,
+      user?: boolean,
+      dashboard?: boolean,
+      account?: boolean,
     },
   }
 }

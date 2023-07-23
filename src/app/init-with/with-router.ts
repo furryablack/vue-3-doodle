@@ -12,6 +12,6 @@ interface IParams {
 
 export function withRouter(params: IParams) {
   const router = LibRouter.createRouter(params.area, params.baseUrl);
-  params.app.use(router);
+  router.install(params.app);
   return router;
 }

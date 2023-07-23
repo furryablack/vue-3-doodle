@@ -1,6 +1,6 @@
 import { createApp as createVueApp, defineAsyncComponent } from 'vue';
 import { initWith } from './init-with';
-import { area } from './area';
+import { Area as App } from './areas';
 
 interface IParams {
   baseUrl: string,
@@ -8,11 +8,11 @@ interface IParams {
   performance: boolean,
 }
 
-const viewport = defineAsyncComponent(() => import('./viewport.vue'));
+export const Viewport = defineAsyncComponent(() => import('./viewport.vue'));
 
 export function createApp(params: IParams) {
-  const app = createVueApp(viewport);
-  const router = initWith.router({ app, area, baseUrl: params.baseUrl });
+  const app = createVueApp(Viewport);
+  const router = initWith.router({ app, area: App, baseUrl: params.baseUrl });
   const isReady = router.isReady();
   const mount = app.mount;
 

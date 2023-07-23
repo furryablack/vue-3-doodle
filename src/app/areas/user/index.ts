@@ -1,5 +1,5 @@
+import { Pages } from '@pages';
 import { AreaFrame } from './area-frame';
-import { User, Dashboard } from '@app/areas';
 
 export const Area = {
   path: '',
@@ -7,19 +7,19 @@ export const Area = {
 
   meta: {
     isArea: {
-      auth: true,
+      user: true,
     },  
   },
-  
+
   children: [
     {
       path: '',
-      children: [Dashboard], 
+      component: Pages.User.Profile,
     },
-
+  
     {
-      path: 'user',
-      children: [User], 
+      path: 'login-history',
+      component: Pages.User.LoginHistory,
     },
   ],
 };

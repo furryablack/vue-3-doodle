@@ -1,9 +1,15 @@
+import { Shared } from '@shared';
+import { Pages } from '@pages';
 import { AreaFrame } from './area-frame';
-import { routes } from './routes';
+
+const MAINTAINCE_PATH = 'maintainance';
+const LibRouter = Shared.Lib.Router;
+const redirect = LibRouter.redirectIfRouteMatched(MAINTAINCE_PATH);
 
 export const Area = {
-  path: '',
+  path: MAINTAINCE_PATH,
   component: AreaFrame,
+  redirect,
 
   meta: {
     isArea: {
@@ -11,5 +17,15 @@ export const Area = {
     },  
   },
 
-  children: routes,
+  children: [
+    {
+      path: '/:pathMatch(.*)*',
+      component: Pages.Maintainance.NotFound,
+    },
+
+    {
+      path: 'service-unavailable',
+      component: Pages.Maintainance.ServiceUnavailable,
+    },
+  ],
 };
