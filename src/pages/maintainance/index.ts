@@ -1,13 +1,7 @@
-import { Pages } from './pages';
+import { NotFound } from './not-found';
+import { ServiceUnavailable } from './service-unavailable';
 
-export const routes = [
-  {
-    path: '/:pathMatch(.*)*',
-    component: Pages.NotFound,
-  },
-
-  {
-    path: 'service-unavailable',
-    component: Pages.ServiceUnavailable,
-  },
-];
+export const Pages = {
+  NotFound,
+  ServiceUnavailable,
+};

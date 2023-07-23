@@ -1,13 +1,9 @@
-import { PagesArea } from '@pages';
-import { Shared } from '@shared';
-import { Frame } from './frame';
-
-const MAINTAINCE_PATH = 'maintainance';
-const LibRouter = Shared.Lib.Router;
+import { AreaFrame } from './area-frame';
+import { routes } from './routes';
 
 export const Area = {
   path: '',
-  component: Frame,
+  component: AreaFrame,
 
   meta: {
     isArea: {
@@ -15,11 +11,5 @@ export const Area = {
     },  
   },
 
-  children: [
-    {
-      path: MAINTAINCE_PATH,
-      redirect: LibRouter.redirectIfRouteMatched(MAINTAINCE_PATH),
-      children: PagesArea.Maintainance,
-    },
-  ],
+  children: routes,
 };

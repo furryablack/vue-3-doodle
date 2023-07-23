@@ -1,13 +1,7 @@
-import { Pages } from './pages';
+import { ApplyNew } from './apply-new';
+import { ApplyExists } from './apply-exists';
 
-export const routes = [
-  {
-    path: '',
-    component: Pages.ApplyExists,
-  },
-
-  {
-    path: 'apply-new',
-    component: Pages.ApplyNew,
-  },
-];
+export const Pages = {
+  ApplyNew,
+  ApplyExists,
+};

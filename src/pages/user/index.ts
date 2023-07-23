@@ -1,13 +1,7 @@
-import { Pages } from './pages';
+import { LoginHistory } from './login-history';
+import { Profile } from './profile';
 
-export const routes = [
-  {
-    path: '',
-    component: Pages.Profile,
-  },
-
-  {
-    path: 'login-history',
-    component: Pages.LoginHistory,
-  },
-];
+export const Pages = {
+  LoginHistory,
+  Profile,
+};

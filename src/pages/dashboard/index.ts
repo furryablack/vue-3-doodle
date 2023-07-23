@@ -1,8 +1,5 @@
-import { Pages } from './pages';
+import { Overview } from './overview';
 
-export const routes = [
-  {
-    path: '',
-    component: Pages.Overview,
-  },
-];
+export const Pages = {
+  Overview,
+};

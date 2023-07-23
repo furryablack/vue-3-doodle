@@ -3,6 +3,7 @@ import { createApp } from './create-app';
 
 const LibEnvironment = Shared.Lib.Environment;
 const ENV = LibEnvironment.getParsed();
+
 main();
 
 function main() {

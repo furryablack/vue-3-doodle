@@ -1,9 +1,9 @@
-import { PagesArea } from '@pages';
-import { Frame } from './frame';
+import { AreaFrame } from './area-frame';
+import { routes } from './dashboard.routes';
 
 export const Area = {
   path: '',
-  component: Frame,
+  component: AreaFrame,
 
   meta: {
     isArea: {
@@ -11,15 +11,5 @@ export const Area = {
     },  
   },
 
-  children: [
-    {
-      path: '',
-      children: PagesArea.Dashboard,
-    },    
-    
-    {
-      path: 'user',
-      children: PagesArea.User,
-    },
-  ],
+  children: routes,
 };

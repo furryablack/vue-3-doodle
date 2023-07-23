@@ -1,11 +1,11 @@
-import { routes as Account } from './account';
-import { routes as User } from './user';
-import { routes as Maintainance } from './maintainance';
-import { routes as Dashboard } from './dashboard';
+import { Pages as Maintainance } from './maintainance';
+import { Pages as Account } from './account';
+import { Pages as User } from './user';
+import { Pages as Dashboard } from './dashboard';
 
-export const PagesArea = {
-  Account,
-  User,
+export const Pages = {
   Maintainance,
+  Account,
   Dashboard,
+  User,
 };
