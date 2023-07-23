@@ -1,4 +1,4 @@
-import { Account } from '@app/areas';
+import { Account } from '@app/areas/internal';
 import { AreaFrame } from './area-frame';
 
 export const Area = {

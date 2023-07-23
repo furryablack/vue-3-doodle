@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full responsive">
+  <div class="h-full relative">
     <router-view />
   </div>
 </template>

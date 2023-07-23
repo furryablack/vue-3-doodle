@@ -1,5 +1,5 @@
+import { Dashboard, User  } from '@app/areas/internal';
 import { AreaFrame } from './area-frame';
-import { User, Dashboard } from '@app/areas';
 
 export const Area = {
   path: '',
@@ -13,13 +13,13 @@ export const Area = {
   
   children: [
     {
-      path: '',
-      children: [Dashboard], 
+      path: 'user',
+      children: [User], 
     },
 
     {
-      path: 'user',
-      children: [User], 
+      path: '',
+      children: [Dashboard], 
     },
   ],
 };

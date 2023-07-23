@@ -9,6 +9,7 @@ declare module 'vue-router' {
       user?: boolean,
       dashboard?: boolean,
       account?: boolean,
+      dummy?: boolean,
     },
   }
 }

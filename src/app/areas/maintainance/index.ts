@@ -1,5 +1,5 @@
 import { Shared } from '@shared';
-import { Pages } from '@pages';
+import { Dummy } from '@app/areas/internal';
 import { AreaFrame } from './area-frame';
 
 const MAINTAINCE_PATH = 'maintainance';
@@ -19,13 +19,8 @@ export const Area = {
 
   children: [
     {
-      path: '/:pathMatch(.*)*',
-      component: Pages.Maintainance.NotFound,
-    },
-
-    {
-      path: 'service-unavailable',
-      component: Pages.Maintainance.ServiceUnavailable,
-    },
+      path: '',
+      children: [Dummy],
+    }, 
   ],
 };

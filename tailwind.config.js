@@ -20,7 +20,7 @@ module.exports = {
     },
 
     screens: {
-      xs: '375px',
+      'xs': '375px',
       ...defaultConfig.screens,
     },
 
@@ -32,8 +32,19 @@ module.exports = {
       colors: {
         ...mirrorHexColors([
           '#191919',
+          '#ab1a1a',
+          '#e4e4e4',
           '#ffffff',
         ]),
+      },
+
+      minHeight: {
+        '75': 'calc(75 * 1rem / 4)',
+      },
+
+      fontSize: {
+        '14': ['calc(12 * 1rem / 16)', { 'lineHeight': '1rem' }],
+        '16': ['calc(16 * 1rem / 16)', { 'lineHeight': '1rem' }],
       },
     },
   },
