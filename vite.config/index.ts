@@ -61,11 +61,14 @@ export default defineConfig((init: { mode: string; }) => {
 
       createHtmlPlugin({
         minify: process.env.VITE_BUILD_USE_MINIFY === 'true',
-        entry: PATHS.APP_INDEX_ENTRY,
 
         inject: {
           data: {
             title: process.env.VITE_APP_TITLE,
+
+            injectScript: {
+              appIndexEntry: `<script type="module" src="${PATHS.APP_INDEX_ENTRY}"></script>`,
+            },
           },
         },
       }),
