@@ -1,1 +1,5 @@
-export const UI = {};
+import { Layout } from './layout';
+
+export const UI = {
+  Layout,
+};
