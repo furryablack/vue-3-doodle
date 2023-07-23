@@ -1,12 +1,8 @@
 <template>
-  <Shared.UI.EachFrameHolder>
+  <div class="h-full relative">
     <router-view />
-  </Shared.UI.EachFrameHolder>
+  </div>
 </template>
-
-<script lang="ts" setup>
-import { Shared } from '@shared';
-</script>
 
 <style lang="less">
 @tailwind base;

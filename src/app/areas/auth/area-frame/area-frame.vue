@@ -1,9 +1,3 @@
 <template>
-  <Shared.UI.EachFrameHolder>
-    <router-view />
-  </Shared.UI.EachFrameHolder>
+  <router-view />
 </template>
-
-<script lang="ts" setup>
-import { Shared } from '@shared';
-</script>
