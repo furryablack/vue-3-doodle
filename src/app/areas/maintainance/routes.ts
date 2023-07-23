@@ -1,6 +1,5 @@
 import { Shared } from '@shared';
-import { routes as planned } from './planned.routes';
-import { routes as unplanned } from './unplanned.routes';
+import { Pages } from '@pages';
 
 const MAINTAINCE_PATH = 'maintainance';
 const LibRouter = Shared.Lib.Router;
@@ -12,13 +11,13 @@ export const routes = [
 
     children: [
       {
-        path: '',
-        children: unplanned,
-      },
+        path: '/:pathMatch(.*)*',
+        component: Pages.Maintainance.NotFound,
+      },,
 
       {
-        path: '',
-        children: planned,
+        path: 'service-unavailable',
+        component: Pages.Maintainance.ServiceUnavailable,
       },
     ],
   },
