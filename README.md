@@ -23,7 +23,7 @@
 - Unauth area for unauthorized access to internal areas
 - Maintainance area for technical pages like service-unavailable, page-not-found, etc
 
-Every area has base area-frame components looks like:
+Every area has base area-frame component looks like:
 ```vue
 <template>
   <router-view />
